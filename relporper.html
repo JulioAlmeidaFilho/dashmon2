@@ -8,11 +8,11 @@
     <title>Usuario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript" src="../js/usuario.js"></script>
+    <script type="text/javascript" src="../js/relatorioperiodo.js"></script>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
-<body onload="carregarusuario()">
+<body>
 
     <table border="0" width="40%" class="menu" align="center">
 
@@ -29,57 +29,50 @@
             </td>
             </td>
             <td align="center">
-                <p><a href="login.html" target="_blank">Logout</a></p>
+                <p><a href="usuario.html" target="_blank">Voltar</a></p>
             </td>
         </tr>
     </table>
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center">Usuário</h3>
-            </div>
-        </div>
-
-        <table border="0" width="100%" class="estrutura" align="center">
-            <tr>
-                <td>
-                    <div class="row">
-                        <div id="foto" class="col-12">
-
-                        </div>
-                    </div>
-                </td>
-                <td>
-
-
-                    <div class="row">
-                        <div id="dados" class="col-12">
-
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
     <br><br>
 
+    <div class="row">
+        <div id="Alarmes" class="col-12">
+
+        </div>
+    </div>
+
+
+    <br><br>
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="text-center">Selecione o seu relatório</h3>
+                <h3 class="text-center">Selecione o periodo de seu relatório</h3>
             </div>
         </div>
 
-        <br><br>
-        <button onclick="window.location='reltiposalarme.html'" type="button" class="btn btn-primary">Relatório
-            Tipos de Alarme</button>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Inicio</span>
+            </div>
+            <input id="txtinicio" type="date" class="form-control" placeholder="Digite data Inicio" aria-label="Incio"
+                aria-describedby="basic-addon1">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Fim</span>
+            </div>
+            <input id="txtfim" type="date" class="form-control" placeholder="Digite data fim" aria-label="Fim"
+                aria-describedby="basic-addon1">
+        </div>
 
+        <br>
+        <button onclick="filtrar()" type="button" class="btn btn-primary">Filtrar</button>
         <br><br>
-        <button onclick="window.location='relporper.html'" type="button" class="btn btn-primary">Relatório Eventos
-            por Período</button>
+
+        <div class="row">
+            <div id="resultado" class="col-12">
+
+            </div>
+        </div>
 
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

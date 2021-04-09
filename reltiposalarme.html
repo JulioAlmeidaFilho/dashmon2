@@ -8,11 +8,11 @@
     <title>Usuario</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script type="text/javascript" src="../js/usuario.js"></script>
+    <script type="text/javascript" src="../js/tiposalarme.js"></script>
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
 
-<body onload="carregarusuario()">
+<body onload="carregaralarmes()">
 
     <table border="0" width="40%" class="menu" align="center">
 
@@ -29,58 +29,32 @@
             </td>
             </td>
             <td align="center">
-                <p><a href="login.html" target="_blank">Logout</a></p>
+                <p><a href="usuario.html" target="_blank">Voltar</a></p>
             </td>
         </tr>
     </table>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center">Usuário</h3>
-            </div>
-        </div>
-
-        <table border="0" width="100%" class="estrutura" align="center">
-            <tr>
-                <td>
-                    <div class="row">
-                        <div id="foto" class="col-12">
-
-                        </div>
-                    </div>
-                </td>
-                <td>
-
-
-                    <div class="row">
-                        <div id="dados" class="col-12">
-
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
     <br><br>
-
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="text-center">Selecione o seu relatório</h3>
+                <h3 class="text-center">Seguem os tipos de alarmes</h3>
             </div>
         </div>
 
         <br><br>
-        <button onclick="window.location='reltiposalarme.html'" type="button" class="btn btn-primary">Relatório
-            Tipos de Alarme</button>
 
+        <div class="row">
+            <div id="resultado" class="col-12">
+
+            </div>
+        </div>
+
+        <br>
+        <button onclick="window.location='usuario.html'" type="button" class="btn btn-primary">Voltar</button>
         <br><br>
-        <button onclick="window.location='relporper.html'" type="button" class="btn btn-primary">Relatório Eventos
-            por Período</button>
-
+ 
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
